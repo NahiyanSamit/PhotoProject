@@ -97,4 +97,27 @@ function openRegisterModal(event) {
         });
 }
 
+//Get the upload link
+var uploadLink = document.getElementById('uploadLink');
+var uploadLinkSidebar = document.getElementById('uploadLinkSidebar');
+
+// Add event listener to both upload links
+uploadLink.addEventListener('click', openUploadModal);
+uploadLinkSidebar.addEventListener('click', openUploadModal);
+
+// Function to load upload content and open modal
+function openUploadModal(event) {
+    event.preventDefault(); // Prevent default behavior (navigation)
+    
+    // Load the content of upload.html dynamically using fetch
+    fetch('Upload.html')
+        .then(response => response.text())
+        .then(html => {
+            modalContent.innerHTML = html; // Inject upload form into modal content
+            modal.style.display = 'flex';  // Display the modal
+        });
+}
+
+
+
 

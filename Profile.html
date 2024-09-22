@@ -1,0 +1,48 @@
+<doctype html>
+    <html class="profile"></html>
+        <head>
+            <title>Profile</title>
+            <link rel="stylesheet" href="CSS/Profile.css">
+        </head>
+        <body>        
+            <header id="Header">
+                <nav>
+                    <ul>
+                        <li><a href="#">Logo</a></li>
+                        <li onclick=showSidebar()><a>Profile</a></li>
+                    </ul>   
+                </nav>
+    
+                <nav>
+                    <ul class="sidebar">
+                        <li onclick=closeSidebar()><a><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                        <li><a href="#" id="loginLinkSidebar">Settings</a></li>
+                        <li><a href="#" id="registerLinkSidebar">Logout</a></li>
+                    </ul>   
+                </nav>
+    
+
+    
+    
+                <script src="Script.js"></script>
+            </header>
+    
+            <main>
+                <ul>
+                    <li>
+                        <h2>Photo 1</h2>
+                        <p>Description 1</p>
+                        <button>Like</button>
+                    </li>
+                    <li>
+                        <h2>Photo 2</h2>
+                        <p>Description 2</p>
+                        <button>Like</button>
+                    </li>
+                </ul>
+            </main>
+            <footer>
+                <p>© 2024 Photo Sharing</p>
+            </footer>
+        </body>
+    </html>

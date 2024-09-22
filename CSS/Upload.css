@@ -1,0 +1,58 @@
+#upload_form input[type="text"] {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+#upload_form textarea {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+textarea {
+    resize: vertical; /* Allow resizing only vertically */
+    width: 100%;      /* Make sure the width is 100% or a set width */
+    max-width: 500px; /* Optional: Limit the max width of the textarea */
+    height: 100px;    /* Default height */
+    padding: 10px;    /* Optional: Add some padding for better appearance */
+    font-size: 14px;  /* Adjust font size as needed */
+}
+
+#upload_form input[type="text"]:focus,.form input[type="text"]:focus {
+    background: #e6e6e6;
+}
+
+#upload_form textarea:focus,.form textarea:focus {
+    background: #e6e6e6;
+}
+
+#upload_form input[type="submit"] {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #4CAF50;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#upload_form input[type="submit"]:hover,.form input[type="submit"]:active,.form input[type="submit"]:focus {
+    background: #43A047;
+}
+
