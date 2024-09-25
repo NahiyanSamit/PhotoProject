@@ -19,6 +19,16 @@
 //     });
 // });
 // Show password checkbox
+// document.addEventListener('DOMContentLoaded', function() {
+//     const showPasswordCheckbox = document.getElementById('show_password');
+//     const passwordInput = document.querySelector('input[name="password"]');
+
+//     showPasswordCheckbox.addEventListener('change', function() {
+//         passwordInput.type = this.checked ? 'text' : 'password';
+//     });
+// });
+
+// Show password checkbox in login and register modal
 document.addEventListener('DOMContentLoaded', function() {
     const showPasswordCheckbox = document.getElementById('show_password');
     const passwordInput = document.querySelector('input[name="password"]');
@@ -61,6 +71,8 @@ function openLoginModal(event) {
         .then(html => {
             modalContent.innerHTML = html; // Inject login form into modal content
             modal.style.display = 'flex';  // Display the modal
+
+            attachShowPasswordListener(); // Attach show password listener
         });
 }
 
@@ -94,7 +106,19 @@ function openRegisterModal(event) {
         .then(html => {
             modalContent.innerHTML = html; // Inject register form into modal content
             modal.style.display = 'flex';  // Display the modal
+
+            attachShowPasswordListener(); // Attach show password listener
         });
+}
+
+// Function to attach show password listener
+function attachShowPasswordListener() {
+    const showPasswordCheckbox = document.getElementById('show_password');
+    const passwordInput = document.querySelector('input[name="password"]');
+
+    showPasswordCheckbox.addEventListener('change', function() {
+        passwordInput.type = this.checked ? 'text' : 'password';
+    });
 }
 
 //Get the upload link
@@ -117,6 +141,11 @@ function openUploadModal(event) {
             modal.style.display = 'flex';  // Display the modal
         });
 }
+
+
+
+
+
 
 
 
